@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <link rel="stylesheet" href="home.css"/>
+ <script src="script.js"></script>
+</head>
+<body>
+        <div class="container">
+            <div id ="main"> </div>
+            <div id ="coupon">
+            <button onClick = "closeCoupon()">&times;</button>
+            <script> window.onload = loadCoupon()
+            </script>
+        <div class="coupon-card">
+            <img src="schoollogo.jpg" class="logo">
+            <h3>20% off on all books
+            <br>during admission in 2023 </h3>
+            <div class="coupon-row">
+            <span  id="cpnCode">STEALDEAL20</span>
+            <span id="cpnBtn">COPY CODE</span>
+
+            </div>
+            <p>Valid till:12 Feb 2023</p>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </div>
+    </div>
+    <script> 
+    var cpnBtn = document.getElementById("cpnBtn");
+    var cpnCode = document.getElementById("cpnCode");
+           
+    cpnBtn.onclick = function(){ 
+    navigator.clipboard.writeText(cpnCode.innerHTML);
+    cpnBtn.innerHTML="COPIED";
+    setTimeout (function() {
+    cpnBtn.innerHTML = "COPY CODE";
+
+    },3000);
+    } 
+     
+    </script>
+   
+</body>
+
+</html>
